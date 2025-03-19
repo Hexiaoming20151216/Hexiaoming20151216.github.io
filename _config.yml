@@ -10,83 +10,63 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# theme                  : "minimal-mistakes-jekyll"
+theme                    : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "default", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "Site Title"
+title                    : "iBug"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+#subtitle                 : "on the Web"
+name                     : "iBug"
+description              : "The little personal site for iBug"
+url                      : "https://ibug.io"
+baseurl                  : ""
+repository               : "iBug/iBug-source" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-breadcrumbs              : # true, false (default)
+logo                     : "/assets/favicon.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "iBug" # overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs              : false # true, false (default)
 words_per_minute         : 200
-enable_copy_code_button  : # true, false (default)
-copyright                : # "copyright" name, defaults to site.title
-copyright_url            : # "copyright" URL, defaults to site.url
+#enable_copy_code_button  : true
+github                   : [metadata]
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-  utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
-  giscus:
-    repo_id              : # Shown during giscus setup at https://giscus.app
-    category_name        : # Full text name of the category
-    category_id          : # Shown during giscus setup at https://giscus.app
-    discussion_term      : # "pathname" (default), "url", "title", "og:title"
-    reactions_enabled    : # '1' for enabled (default), '0' for disabled
-    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
-    strict               : # 1 for enabled, 0 for disabled (default)
-    input_position       : # "top", "bottom" # The comment input box will be placed above or below the comments
-    emit_metadata        : # 1 for enabled, 0 for disabled (default) # https://github.com/giscus/giscus/blob/main/ADVANCED-USAGE.md#imetadatamessage
-    lang                 : # "en" (default)
-    lazy                 : # true, false # Loading of the comments will be deferred until the user scrolls near the comments container.
-  staticman:
-    branch               : # "master"
-    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
+    shortname            : "ibugone" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
 reCaptcha:
   siteKey                :
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-  hide                   : # true, false (default)
-search                   : # true, false (default)
-search_full_content      : # true, false (default)
-search_provider          : # lunr (default), algolia, google
-lunr:
-  search_within_pages    : # true, false (default)
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : algolia # lunr (default), algolia, google
 algolia:
-  application_id         : # YOUR_APPLICATION_ID
-  index_name             : # YOUR_INDEX_NAME
-  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : # true (default), false
-google:
-  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
-  instant_search         : # false (default), true
+  application_id         : "14DZKASAEJ"
+  index_name             : "iBug_website"
+# nodes_to_index         : 'section.page__content p, section.page__content h1, section.page__content h2, section.page__content h3, section.page__content h4, section.page__content h5, section.page__content h6, section.page__content img, section.page__content blockquote, section.page__content li, section.page__content dt, section.page__content dl'
+  search_only_api_key    : "a0d8cb9da2d6ad0d17dcd40c58c72a56"
+  powered_by             : true # true (default), false
+  settings:
+    searchableAttributes: ["title", "hierarchy.lvl0", "hierarchy.lvl1", "hierarchy.lvl2", "hierarchy.lvl3", "hierarchy.lvl4", "hierarchy.lvl5", "unordered(content)", "collection,categories,tags"]
+    customRanking: ["desc(date)", "desc(weight.heading)", "asc(weight.position)"]
+    attributesToHighlight: ["title", "hierarchy.lvl0", "hierarchy.lvl1", "hierarchy.lvl2", "hierarchy.lvl3", "hierarchy.lvl4", "hierarchy.lvl5", "content", "html", "collection", "categories", "tags"]
+    attributesForFaceting: ["searchable(tags)", "searchable(type)", "searchable(title)"]
+  files_to_exclude:
+    - _pages/404.md
+    - _pages/index.md
+    - README.md
+    - REMOTE_README.md
+    - _home/status.html
+    - _posts/2009/2009-11-13-regex-match-open-tags-except-xhtml-self-contained-tags.md
+    - _posts/2021/2021-04-17-tunight-talk.md
 # SEO Related
-google_site_verification :
+google_site_verification : "5_jn7a-vZslUtLJO-BkY-cPDGgah5JP49RGgeOBmYSk"
 bing_site_verification   :
-naver_site_verification  :
 yandex_site_verification :
-baidu_site_verification  :
+naver_site_verification  :
 
 # Social Sharing
 twitter:
@@ -95,48 +75,54 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : /image/og-1.jpg # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  type                   : Person # Person or Organization (defaults to Person)
+  name                   : iBug # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
 
 # Analytics
 analytics:
-  provider               : # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
-    anonymize_ip         : # true, false (default)
+    tracking_id          : "G-V93196TX91"
+    anonymize_ip         : false # true, false (default)
 
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  name             : "iBug"
+  avatar           : "/image/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "Developer, System Administrator, Geek"
+  location         : null # "China"
+  email            : null # "mailto:i@ibugone.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: "mailto:%69@ibugone.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
+      # url: "https://ibugone.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url: "https://twitter.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
+    - label: "Stack Overflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/5958455/ibug"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://github.com/iBug"
+    - label: "Steam"
+      icon: "fab fa-fw fa-steam"
+      url: "https://steamcommunity.com/id/ibugone"
+    - label: "Telegram Channel"
+      icon: "fab fa-fw fa-telegram"
+      url: "https://t.me/iBugThought"
 
 # Site Footer
 footer:
@@ -149,7 +135,10 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/iBug"
+    - label: "Stack Overflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/5958455/ibug"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -161,48 +150,69 @@ footer:
       # url:
 
 
+footer_scripts:
+  - /assets/js/main.min.js
+
+
 # Reading Files
 include:
-  - .htaccess
-  - _pages
+  - _pages/
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - vendor
+  - "*.py"
+  - "*.rb"
+  - "*.sh"
+  - "*.yml"
   - .asset-cache
   - .bundle
+  - .dockerignore
+  - .git-metadata
+  - .github/
+  - .gitignore
   - .jekyll-assets-cache
+  - .ruby-lsp/
   - .sass-cache
+  - .travis.yml
+  - .vscode
+  - _site/
   - assets/js/plugins
   - assets/js/_main.js
   - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
+  # Capfile
+  # CHANGELOG
+  # config
+  - Dockerfile
+  - etc/
   - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
+  - Gemfile.lock
+  # Gruntfile.js
+  # gulpfile.js
+  - i/
+  - image/
+  - "LICENSE*"
+  # log
   - node_modules
   - package.json
   - package-lock.json
   - Rakefile
-  - README
-  - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
+  - README.md
+  - REMOTE_README.md
+  - /script
+  # tmp
+  - vendor/
 keep_files:
   - .git
-  - .svn
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+  - .nojekyll
+  - CNAME
+  - README.md
+  - image
+encoding: "UTF-8"
 
 
 # Conversion
 markdown: kramdown
 highlighter: rouge
-lsi: false
+future: true
+lsi: false  # *Very* slow
 excerpt_separator: "\n\n"
 incremental: false
 
@@ -215,62 +225,78 @@ kramdown:
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  #smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
+  math_engine: mathjax
+  parse_block_html: false # true
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      #start_line: 1
+
 
 
 # Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  quiet_deps: true
 
 
 # Outputting
-permalink: /:categories/:title/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+source_url: "https://github.com/iBug/iBug-source"
+index_url: /blog/
+permalink: /blog/:year/:month/:title/
+timezone: "Etc/UTC" # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+date_format: "%b %-d, %Y" # "%b %-d, %Y at %-H:%M"
 
-
-# Pagination with jekyll-paginate
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-
-# Pagination with jekyll-paginate-v2
-# See https://github.com/sverrirs/jekyll-paginate-v2/blob/master/README-GENERATOR.md#site-configuration
-#   for configuration details
+paginate: null
+#paginate_path: "/blog/:num/"
 pagination:
-  # Set enabled to true to use paginate v2
-  # enabled: true
-  debug: false
-  collection: 'posts'
-  per_page: 10
-  permalink: '/page/:num/'
-  title: ':title - page :num'
+  enabled: true
+  per_page: 8
+  permalink: "/:num/"
+  title: ":title - Page :num of :max"
   limit: 0
-  sort_field: 'date'
+  sort_field: "date"
   sort_reverse: true
-  category: 'posts'
-  tag: ''
-  locale: ''
   trail:
     before: 2
     after: 2
 
+autopages:
+  enabled: true
+  categories:
+    layouts: ['autopages.html']
+    title: 'Category: :cat'
+    permalink: '/category/:cat'
+  collections:
+    layouts: ['autopages.html']
+    title: 'Collection: :coll'
+    permalink: '/collection/:coll'
+  tags:
+    layouts: ['autopages.html']
+    title: 'Tag: :tag'
+    permalink: '/tag/:tag'
 
-# Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
-
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
+collections:
+  home:
+    output: true
+    permalink: "/:path/"
+  cn:
+    output: true
+    permalink: "/cn/:year/:month/:title/"
+  ct:
+    output: true
+    permalink: "/cn/:year/:month/:title/"
+  project:
+    output: true
+  share:
+    output: true
 
 
 # Archives
@@ -284,42 +310,130 @@ whitelist:
 #  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
-  type: liquid
-  path: /categories/
+  type: jekyll-archives # liquid
+  path: /category/
 tag_archive:
-  type: liquid
-  path: /tags/
+  type: jekyll-archives # liquid
+  path: /tag/
 # https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+jekyll-archives:
+  enabled:
+    - year
+    # categories
+    # tags
+  layout: archive-taxonomy
+  layouts: {}
+  permalinks:
+    year: /year/:year/
+    category: /category/:name/
+    tag: /tag/:name/
 
 
 # HTML Compression
-# - https://jch.penibelst.de/
+# - http://jch.penibelst.de/
 compress_html:
   clippings: all
   ignore:
     envs: development
 
 
+# jekyll-relative-links
+relative_links:
+  enabled:     true
+  collections: true
+
+
 # Defaults
 defaults:
-  # _posts
+  - scope:
+      path: ""
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+      related: false
+      toc_sticky: true
+      toc_icon: "file-alt fa-fw"
+      header:
+        og_image: /image/og.jpg
+        overlay_image: "/image/header/mountain-1.jpg"
+        show_overlay_excerpt: false
+      sidebar:
+        nav: home
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
       read_time: true
-      comments: # true
-      share: true
+      show_date: true
       related: true
+      toc: true
+      #toc_label: "On this page"
+  - scope:
+      path: ""
+      type: home
+    values:
+      #classes: wide
+      no_pagination: true
+      header:
+        overlay_image: "/image/header/water-4.jpg"
+  - scope:
+      path: ""
+      type: share
+    values:
+      #classes: wide
+      related: true
+      sidebar:
+        nav: share
+  - scope:
+      path: ""
+      type: project
+    values:
+      no_date: true
+      related: false
+      toc: true
+      header:
+        teaser: "/image/teaser/project/default.png"
+        overlay_image: "/image/header/mountain-2.jpg"
+  - scope:
+      path: ""
+      type: pages
+    values:
+      author_profile: false
+      comments: false
+      related: false
+  - scope:
+      path: ""
+      type: cn
+    values: &cn-defaults
+      lang: "zh-CN"
+      locale: "zh-CN"
+      read_time: true
+      show_date: true
+      comments: true
+      words_per_minute: 350
+      toc: true
+      toc_label: "目录"
+      toc_icon: "th-list"
+      header:
+        overlay_image: "/image/header/cloud-1.jpg"
+        overlay_filter: linear-gradient(rgba(0, 146, 202, 0.3), rgba(0, 0, 0, 0.2))
+  - scope:
+      path: ""
+      type: ct
+    values:
+      <<: *cn-defaults
+  - scope:
+      path: ""
+      type: tag
+    values: &tag-defaults
+      comments: false
+      related: false
+      header:
+        overlay_image: "/image/header/water-2.jpg"
+  - scope:
+      path: ""
+      type: category
+    values:
+      <<: *tag-defaults
