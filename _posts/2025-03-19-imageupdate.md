@@ -9,15 +9,15 @@
 
 ## MEI相机模型
 
-[《single_viewpoint_calib_mei_07.pdf》](assets/files/single_viewpoint_calib_mei_07.pdf)
+[《single_viewpoint_calib_mei_07.pdf》](https://github.com/Hexiaoming20151216/Hexiaoming20151216.github.io/blob/master/assets/files/single_viewpoint_calib_mei_07.pdf)
 
 [VinsFusion中的MEI模型解析 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/414047132)
 
 [相机内参模型Mei/omni-directional详解 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/532505565)
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/WgZOZwWGYrMLlLX8/img/c0dfdf22-40f2-44a9-971b-af0c7c8a6674.png)
+![image.png](https://github.com/Hexiaoming20151216/Hexiaoming20151216.github.io/blob/master/assets/imges/imageupdate/MEI_MODEL1.png)
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/WgZOZwWGYrMLlLX8/img/9398ac2b-e839-4c5a-b64a-375c9af948b4.png)
+![image.png](https://github.com/Hexiaoming20151216/Hexiaoming20151216.github.io/blob/master/assets/imges/imageupdate/MEI_MODEL2.png)
 
 ### 空间三维点到像素平面的投影
 
@@ -70,7 +70,7 @@ $$p_{uv}=Km_d= \begin{bmatrix}    f_x & 0 & c_x \\    0 & f_y & c
 
 [一文详解分析鱼眼相机投影成像模型和畸变模型 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/511284263)
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/WgZOZwWGYrMLlLX8/img/73185193-46d8-443a-af4a-03ed9c2a7332.png)
+![image.png](https://github.com/Hexiaoming20151216/Hexiaoming20151216.github.io/blob/master/assets/imges/imageupdate/KB8_MODEL.png)
 
 ### 空间三维点到像素平面的投影
 
@@ -168,18 +168,18 @@ $$
 
 图中$$b\_{1}$$ ，$$b\_{2}$$ 为以相机光心为原点的单位球面上正切平面标准正交基，单位球面上一点$$\overline{P}_{l}^{cj}$$为图像像素点投影到单位球面上的估计值，在优化增量$$r\_{c}$$ 的作用下，点位置更新到$$P\_{l}^{cj}$$
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/WgZOZwWGYrMLlLX8/img/0f8ce587-929d-4dc8-a77c-3630361f69e6.png)
+![image.png](https://github.com/Hexiaoming20151216/Hexiaoming20151216.github.io/blob/master/assets/imges/imageupdate/MEI_TAGENT.png)
 
 $$b\_{1}$$ ，$$b\_{2}$$ 这组正交基可以通过球半径和向量$$\overline{P}_{l}^{cj}$$点乘（内积投影），叉乘（外积垂直）得到：
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/WgZOZwWGYrMLlLX8/img/fa351d85-e490-4eef-95e8-187b91c16385.png)
+![image.png](https://github.com/Hexiaoming20151216/Hexiaoming20151216.github.io/blob/master/assets/imges/imageupdate/MEI_JACOBIAN.png)
 todo: 修改正交基为重投影三维点（即通过待优化状态量转换得到的单位球面投影点）处的标准正交基
 
 残差定义为：单位球面上的观测点和目标点之间的差值在$$b\_{1}$$ ，$$b\_{2}$$ 这组正交基上的投影。
 
 ### 雅可比推导：
 
-![image.png](https://alidocs.oss-cn-zhangjiakou.aliyuncs.com/res/WgZOZwWGYrMLlLX8/img/96985174-9245-40de-a210-70c65bf61101.png)
+![image.png](https://github.com/Hexiaoming20151216/Hexiaoming20151216.github.io/blob/master/assets/imges/imageupdate/MEI_JACOBIAN.png)
 
 ## KB模型量测更新
 
